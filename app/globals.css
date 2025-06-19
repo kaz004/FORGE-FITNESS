@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom Button Styles (Homepage Only) */
+.button {
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle 60px at 0% 100%, #3fe9ff, #0000ff80, transparent);
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+  padding: 12px 20px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(circle 60px at 0% 100%, #00e1ff1a, #0000ff11, transparent);
+  position: absolute;
+}
+
+/* CSS-Generated Images for Mission Words */
+.supportive-image {
+  background: linear-gradient(135deg, #ff6b6b, #feca57),
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 20%, transparent 21%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.2) 15%, transparent 16%);
+  background-size: 100% 100%, 40px 40px, 60px 60px;
+}
+
+.inclusive-image {
+  background: linear-gradient(45deg, #ff9a56, #ff6b9d),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+}
+
+.everyone-image {
+  background: linear-gradient(135deg, #feca57, #48cae4),
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.4) 10%, transparent 11%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.3) 8%, transparent 9%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 12%, transparent 13%);
+  background-size: 100% 100%, 30px 30px, 50px 50px, 70px 70px;
+}
+
+.fitness-image {
+  background: linear-gradient(45deg, #48cae4, #06ffa5),
+    linear-gradient(
+      135deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.2) 25%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 50%
+    );
+  background-size: 100% 100%, 20px 20px;
+}
+
+.confidence-image {
+  background: linear-gradient(135deg, #06ffa5, #4cc9f0),
+    conic-gradient(from 45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 100% 100%, 80px 80px;
+}
+
+.results-image {
+  background: linear-gradient(45deg, #4cc9f0, #7209b7),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1) 50%, transparent 50%);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Background Patterns for Feature Cards */
+.equipment-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(251, 146, 60, 0.1) 2px, transparent 2px);
+  background-size: 40px 40px, 60px 60px;
+}
+
+.trainers-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(147, 51, 234, 0.1) 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
+.schedule-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(34, 197, 94, 0.1),
+      rgba(34, 197, 94, 0.1) 2px,
+      transparent 2px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(20, 184, 166, 0.1),
+      rgba(20, 184, 166, 0.1) 2px,
+      transparent 2px,
+      transparent 20px
+    );
+}
+
+.tracking-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(147, 51, 234, 0.1),
+    rgba(236, 72, 153, 0.1),
+    rgba(147, 51, 234, 0.1)
+  );
+  background-size: 80px 80px;
+}
+
+.classes-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(ellipse at center, rgba(234, 179, 8, 0.1) 30%, transparent 30%),
+    radial-gradient(ellipse at 25% 75%, rgba(251, 146, 60, 0.1) 20%, transparent 20%);
+  background-size: 50px 50px, 70px 70px;
+}
+
+.recovery-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(60deg, rgba(6, 182, 212, 0.1) 25%, transparent 25%),
+    linear-gradient(120deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%);
+  background-size: 40px 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button {
+    font-size: 0.9rem;
+  }
+
+  .inner {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    font-size: 0.8rem;
+  }
+
+  .inner {
+    padding: 8px 14px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* Animation for loading */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Enhanced water effects */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(180deg);
+  }
+}
+
+@keyframes bubble-float {
+  0% {
+    transform: translateY(0px) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+}
+
+.wave-animation {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.bubble-animation {
+  animation: bubble-float 3s ease-out infinite;
+}
+
+/* Light theme enhancements */
+@media (prefers-color-scheme: light) {
+  .text-gray-300 {
+    color: rgb(75 85 99);
+  }
+
+  .text-gray-400 {
+    color: rgb(107 114 128);
+  }
+}
